@@ -10,7 +10,7 @@ namespace BusinessIdentificationChecker
     /// <summary>
     /// Class to check the business id validity and possible reasons for invalidity. Implements interface ISpecification.
     /// </summary>
-    class BusinessIdChecker<TEntity> : ISpecification<TEntity>
+    class BusinessIdentifierSpecification<TEntity> : ISpecification<TEntity>
     {
         #region Fields
 

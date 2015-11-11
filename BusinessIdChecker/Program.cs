@@ -15,7 +15,7 @@ namespace BusinessIdentificationChecker
         {
             bool running = true;
 
-            BusinessIdChecker<string> businessIdentifierChecker = new BusinessIdChecker<string>();
+            BusinessIdentifierSpecification<string> businessIdentifierChecker = new BusinessIdentifierSpecification<string>();
 
             while (running)
             {
@@ -48,7 +48,7 @@ namespace BusinessIdentificationChecker
         #region Private methods
 
         /// <summary>Test identifier validity</summary>
-        private static bool testIdentifier(string bi, BusinessIdChecker<string> checker)
+        private static bool testIdentifier(string bi, BusinessIdentifierSpecification<string> checker)
         {
             //BusinessIdChecker<string> businessIdentifierSpecification = new BusinessIdChecker<string>();
             if (checker.IsSatisfiedBy(bi))
@@ -73,7 +73,7 @@ namespace BusinessIdentificationChecker
         }
 
         /// <summary>Test set</summary>
-        private static void runTestSet(BusinessIdChecker<string> checker)
+        private static void runTestSet(BusinessIdentifierSpecification<string> checker)
         {
             Dictionary<string, bool> testData = new Dictionary<string, bool>();
 
